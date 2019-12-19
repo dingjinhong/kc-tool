@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ide
+Bundle-SymbolicName: kc.tool.axon.ide;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: kc.tool.axon.ide.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.apache.felix.scr,
+ org.eclipse.equinox.util,
+ org.eclipse.equinox.event,
+ kc.tool.excel;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: kc.tool.axon.ide
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="kc.tool.axon.ide.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="kc.tool.axon.ide.Perspective"
+            name="Perspective"
+            id="kc.tool.axon.ide.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="kc.tool.axon.ide.perspective">
+         <view
+               id="kc.tool.excel.view"
+               minimized="false"
+               relationship="left"
+               standalone="true"
+               relative="org.eclipse.ui.editorss">
+         </view>
+         <hiddenMenuItem
+               id="kc.tool.lang.select.file">
+         </hiddenMenuItem>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="kc.tool.axon.ide.application"
+            name="toolaxon">
+         <property
+               name="appName"
+               value="toolaxon">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
